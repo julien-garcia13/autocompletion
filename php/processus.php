@@ -4,13 +4,12 @@ if(isset($_POST["query"]))
 {	
 	$data = array();
 	$condition = preg_replace('/[^A-Za-z0-9\- ]/', '', $_POST["query"]);
-	$query = "SELECT `name`, `year` FROM `products` WHERE `name` LIKE '%".$condition."%' ORDER BY id DESC LIMIT 5";
+	$query = "SELECT `name` FROM `products` WHERE `name` LIKE '%".$condition."%' ORDER BY id DESC LIMIT 5";
 	$resultat = $db->query($query);
 	$replace_string = '<b>'.$condition.'</b>';
 	foreach($resultat as $row)
 	{
 		$data[] = array('name' => str_ireplace($condition, $replace_string, $row["name"]));
-		$data[] = array('year' => str_ireplace($condition, $replace_string, $row["year"]));
 	}
 	echo json_encode($data);
 }

@@ -69,6 +69,15 @@ body.dark .titre
 {
    color: white;
 }
+/* Version mobile */
+@media all and (max-width: 650px)
+{
+    .titre
+    {
+        font-size: 50px;
+        margin-top: 5%;
+    }
+}
 /* Barre de recherche */
 .barre-de-recherche
 {
@@ -200,6 +209,10 @@ body.dark .barre-de-recherche input
     font-family: "SF Pro Display";
 }
 body.dark .barre-de-recherche input::placeholder
+{
+    color: black;
+}
+body.dark input
 {
     color: black;
 }

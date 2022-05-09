@@ -1,4 +1,4 @@
-// Pour le dark mode de la page entière
+// Pour le dark mode
 const darkmode = document.getElementById('darkmode');
 darkmode.addEventListener('change', () =>
 {

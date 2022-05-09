@@ -46,7 +46,7 @@ function load_data(query)
 				{
 					for(var count = 0; count < response.length; count++)
 					{
-						html += '<a href="#" class="resultat" onclick="get_text(this)">'+response[count].name+'</a>';
+						html += '<a href="#" class="resultat" onclick="get_text(this)">'+response[count].name+'</a><br />';
 					}
 				}
 				else // Si aucun produit n'est trouvé dans la recherche

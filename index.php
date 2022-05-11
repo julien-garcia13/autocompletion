@@ -21,10 +21,11 @@
         </div>
         <!-- Barre de recherche -->
         <div class="barre-de-recherche">
-            <input type="search" name="search_box" placeholder ="Search ..." id="search_box" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onkeyup="javascript:load_data(this.value)"/>
+            <input type="search" name="search_box" placeholder ="Search ..." id="search_box" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onkeyup="javascript:chargementDonnees(this.value)"/>
             <span id="resultat-de-recherche"></span>
             <div class="search"></div>
         </div>
+    </div>
         <script src="js/dark-mode.js"></script> <!-- Script pour le dark mode -->
         <script src="js/autocompletion.js"></script> <!-- Script pour l'autocomplétion (script principal) -->
     </body>

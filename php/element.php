@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once('config.php'); // On appelle la base de données.
 $db = new bdd();
 $idProduit = $_GET['id']; // Il va récupérer l'ID du produit sélectionné.

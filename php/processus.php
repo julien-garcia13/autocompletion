@@ -13,5 +13,5 @@ if(isset($_POST["query"]))
 	}
 	echo json_encode($data);
 }
-$post_data = json_decode(file_get_contents('php://input'), true);
+$post_data = json_decode(file_get_contents('../127_0_0_1.json'), true);
 ?>

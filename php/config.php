@@ -1,5 +1,5 @@
-<?php
-class bdd
+<?php // Fichier à lier avec un "require_once"
+class BaseDeDonnées // Classe à appeler pour faire fonctionner une page qui demande la base de données au fonctionnement.
 {
     private $host = 'localhost';
     private $username = 'root';
@@ -30,6 +30,14 @@ class bdd
         $request = $this->db->prepare($sql);
         $request->execute($data);
         return $request->fetchAll(PDO::FETCH_OBJ);
+    }
+    public function rechercheParID($name)
+    {
+        $query = "SELECT * FROM `products` WHERE `name` LIKE :name";
+        $request = $this->db->prepare($query);
+        $request->execute(["name" => "%".$name."%"]);
+        $data = $request->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
     }
 }
 ?>

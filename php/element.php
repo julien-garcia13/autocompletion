@@ -1,6 +1,6 @@
 <?php
-require_once('config.php'); // On appelle la base de données.
-$db = new bdd();
+require_once('config.php'); // Je lie ma page de configuration de la base de données.
+$db = new BaseDeDonnées(); // J'appelle la classe 
 $idProduit = $_GET['id']; // Il va récupérer l'ID du produit sélectionné.
 $idProduit = $db->query("SELECT * FROM `products` WHERE id = '$idProduit'"); // J'affiche tous les produits, mais seulement celui qu'on a choisi, donc par l'ID.
 ?>
@@ -34,8 +34,8 @@ $idProduit = $db->query("SELECT * FROM `products` WHERE id = '$idProduit'"); // 
                     <?php foreach ($idProduit as $produit) : ?>
                         <!-- Une boucle qui permet d'afficher les produits dans la BDD. -->
                         <img class="image-produit" src="<?= $produit->img ?>" alt="Card image cap">
-                            <h5 class="card-title" style="margin-bottom: 0.5rem;font-size: 68px;"><?= $produit->name ?></h5><br /> <!-- Via cet argument, il va afficher la liste des noms des produits présents dans la BDD. -->
-                            <h5 class="card-title" style="margin-bottom: 0.5rem;font-size: 68px;"><?= $produit->year ?></h5><br /> <!-- Via cet argument, il va afficher la liste des années des produits présents dans la BDD. -->
+                            <h5 class="card-title"><?= $produit->name ?></h5><br /> <!-- Via cet argument, il va afficher la liste des noms des produits présents dans la BDD. -->
+                            <h5 class="card-title"><?= $produit->year ?></h5><br /> <!-- Via cet argument, il va afficher la liste des années des produits présents dans la BDD. -->
                             <?php endforeach; ?>
                             <!-- Fin de la boucle -->
                         </div>

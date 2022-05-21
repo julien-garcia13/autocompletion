@@ -21,9 +21,11 @@
         </div>
         <!-- Barre de recherche -->
         <div class="barre-de-recherche">
-            <input type="search" name="search_box" placeholder ="Search ..." id="search_box" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onkeyup="javascript:chargementDonnees(this.value)"/>
-            <span id="resultat-de-recherche"></span>
-            <div class="search"></div>
+            <form method="POST" action="php/processus.php">
+                <input type="search" name="search_box" placeholder ="Search ..." id="search_box" onkeyup="javascript:chargementDonnees(this.value)"/>
+                <span id="resultat-de-recherche"></span>
+                <div class="search"></div>
+            </form>
         </div>
     </div>
         <script src="js/dark-mode.js"></script> <!-- Script pour le dark mode -->

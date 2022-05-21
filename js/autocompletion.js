@@ -6,7 +6,7 @@ function recupererTexte(event)
         method:"POST",body: JSON.stringify
         (
             {
-                search_query : string
+                search_name : string
             }
         ),
 		headers :
@@ -22,12 +22,12 @@ function recupererTexte(event)
 	}
 	)
 }
-function chargementDonnees(query)
+function chargementDonnees(name)
 {
-	if(query.length > 2)
+	if(name.length > 2)
 	{
 		var via_donnees = new FormData();
-		via_donnees.append('query', query);
+		via_donnees.append('name', name);
 		var requete_ajax = new XMLHttpRequest();
 		requete_ajax.open('POST', 'php/processus.php');
 		requete_ajax.send(via_donnees);
@@ -41,7 +41,7 @@ function chargementDonnees(query)
 				{
 					for(var count = 0; count < reponse.length; count++)
 					{
-						html += '<a href="#" id="myBtn" class="resultat" onclick="recupererTexte(this)">'+reponse[count].name+'</a><br />';
+						html += '<a href="php/element.php?id='+reponse[count].id+'" class="resultat" onclick="recupererTexte(this)">'+reponse[count].name+'</a><br />';
 					}
 				}
 				else // Si aucun produit n'est trouvé dans la recherche

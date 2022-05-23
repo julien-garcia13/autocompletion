@@ -219,10 +219,163 @@ body.dark input
 /* Dans la recherche */
 .liste-de-recherche, .message-aucun-produit, .resultat
 {
+    margin-top: 35%;
+    border-color: black;
+    font-size: 20px;
     color: #111;
     font-family: "SF Pro Display";
 }
 body.dark .message-aucun-produit
 {
     color: white;
+}
+body.dark .resultat
+{
+    color: white;
+}
+/* Suggestion de recherche */
+.suggestion-zone
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+.suggestion
+{
+    font-family: "SF Pro Display";
+    font-size: 20px;
+}
+body.dark .suggestion
+{
+    color: white;
+}
+/* Slide */
+.slide
+{
+    height: 50px;
+    padding-left:15px;
+    overflow: hidden;
+}
+.slide div
+{
+    height: 50px;
+    margin-bottom: 50px;
+    padding: 2px 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.slide-text1
+{
+    font-size: 18px;
+    background: #1FB2CF;
+    background: -webkit-radial-gradient(circle farthest-side at center center, #1FB2CF 0%, #C31BCF 100%);
+    background: -moz-radial-gradient(circle farthest-side at center center, #1FB2CF 0%, #C31BCF 100%);
+    background: radial-gradient(circle farthest-side at center center, #1FB2CF 0%, #C31BCF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "SF Pro Display";
+    animation: slide 10s linear infinite;
+}
+.slide-text2
+{
+    font-size: 18px;
+    background: #1FB2CF;
+    background: -webkit-radial-gradient(circle farthest-side at center center, #1FB2CF 0%, #C31BCF 100%);
+    background: -moz-radial-gradient(circle farthest-side at center center, #1FB2CF 0%, #C31BCF 100%);
+    background: radial-gradient(circle farthest-side at center center, #1FB2CF 0%, #C31BCF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "SF Pro Display";
+}
+.slide-text3
+{
+    font-size: 18px;
+    background: #1FB2CF;
+    background: -webkit-radial-gradient(circle farthest-side at center center, #1FB2CF 0%, #C31BCF 100%);
+    background: -moz-radial-gradient(circle farthest-side at center center, #1FB2CF 0%, #C31BCF 100%);
+    background: radial-gradient(circle farthest-side at center center, #1FB2CF 0%, #C31BCF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "SF Pro Display";
+}
+@keyframes slide
+{
+    0%
+    {
+        margin-top:-300px;
+    }
+    5%
+    {
+        margin-top:-200px;
+    }
+    33%
+    {
+        margin-top:-200px;
+    }
+    38%
+    {
+        margin-top:-100px;
+    }
+    66%
+    {
+        margin-top:-100px;
+    }
+    71%
+    {
+        margin-top:0px;
+    }
+    100%
+    {
+        margin-top:0px;
+    }
+}
+/* GitHub */
+.github
+{
+    font-family: "SF Pro Display";
+}
+.github:link
+{
+    color: #292C35;
+}
+/* visited link */
+.github:visited
+{
+    color: #292C35;
+}
+/* mouse over link */
+.github:hover
+{
+    color: #292C35;
+}
+/* selected link */
+.github:active
+{
+    color: #292C35;
+}
+body.dark .github:link
+{
+    color: white;
+}
+/* visited link */
+body.dark .github:visited
+{
+    color: white;
+}
+/* mouse over link */
+body.dark .github:hover
+{
+    color: white;
+}
+/* selected link */
+body.dark .github:active
+{
+    color: white;
+}
+.github-zone
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

@@ -15,19 +15,34 @@
                 <div class="ball"></div>
             </label>
         </div>
-        <!-- Titre -->
-        <div class="titre-zone">
-            <p1 class="titre">Apple Products</p1>
-        </div>
-        <!-- Barre de recherche -->
-        <div class="barre-de-recherche">
-            <form method="POST" action="php/processus.php">
-                <input type="search" name="search_box" placeholder ="Search ..." id="search_box" onkeyup="javascript:chargementDonnees(this.value)"/>
-                <span id="resultat-de-recherche"></span>
-                <div class="search"></div>
-            </form>
-        </div>
-    </div>
+        <main>
+            <!-- Titre -->
+            <div class="titre-zone">
+                <p1 class="titre">Apple Products</p1>
+            </div>
+            <!-- Slide de suggestion -->
+            <article>
+                <div class="suggestion-zone">
+                    <p3 class="suggestion">Search : </p3>
+                    <div class="slide">
+                        <div class="slide-text1">iPhone 11<br /></div>
+                        <div class="slide-text2">AirPods Pro<br /></div>
+                        <div class="slide-text3">iPad Air M1<br /></div>
+                    </div>
+                </div>
+                <div class="github-zone">
+                    <a class="github" href="https://github.com/julien-garcia13/autocompletion"><p2 alt="GitHub Project">GitHub</p2></a>
+                </div>
+                <!-- Barre de recherche -->
+                <div class="barre-de-recherche">
+                    <form method="POST" action="php/processus.php">
+                        <input type="search" name="search_box" placeholder ="Search ..." id="search_box" onkeyup="javascript:chargementDonnees(this.value)"/>
+                        <span id="resultat-de-recherche"></span>
+                        <div class="search"></div>
+                    </form>
+                </div>
+            </article>
+        </main>
         <script src="js/dark-mode.js"></script> <!-- Script pour le dark mode -->
         <script src="js/autocompletion.js"></script> <!-- Script pour l'autocomplétion (script principal) -->
     </body>

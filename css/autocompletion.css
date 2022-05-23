@@ -60,6 +60,13 @@ body.dark
     display: flex;
     justify-content: center;
 }
+.titre-zone2
+{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .titre
 {
     font-family: 'SF Pro Display';
@@ -378,4 +385,35 @@ body.dark .github:active
     width: 100%;
     display: flex;
     justify-content: center;
+}
+/* Page élément */
+.year
+{
+    font-family: "SF Pro Display";
+    font-size: 30px;
+}
+body.dark .year
+{
+    font-family: "SF Pro Display";
+    font-size: 30px;
+    color: white;
+}
+.fiche-produit-zone
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.image-produit
+{
+    display: flex;
+    width: 100%;
+}
+.footer-element
+{
+    margin-top: 5%;
+    font-size: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
 }

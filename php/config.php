@@ -6,7 +6,6 @@ class BaseDeDonnées // Classe à appeler pour faire fonctionner une page qui de
     private $password = '';
     private $database = 'autocompletion';
     private $db;
-    
     public function __construct($host = null, $username = null, $password = null, $database = null)
     {
         if($host != null)

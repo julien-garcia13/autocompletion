@@ -25,19 +25,27 @@ $idProduit = $db->query("SELECT * FROM `products` WHERE id = '$idProduit'"); // 
         </header>
         <main>
             <!-- Titre -->
-            <div class="titre-zone">
+            <div class="titre-zone2">
                 <p1 class="titre">Apple Products</p1>
             </div>
             <article>
-                <div class="fiche-produit-zone" style="padding-top: 5%;">
-                <div class="fiche-produit">
-                    <?php foreach ($idProduit as $produit) : ?>
-                        <!-- Une boucle qui permet d'afficher les produits dans la BDD. -->
-                        <img class="image-produit" src="<?= $produit->img ?>" alt="Card image cap">
-                            <h5 class="card-title"><?= $produit->name ?></h5><br /> <!-- Via cet argument, il va afficher la liste des noms des produits présents dans la BDD. -->
-                            <h5 class="card-title"><?= $produit->year ?></h5><br /> <!-- Via cet argument, il va afficher la liste des années des produits présents dans la BDD. -->
-                            <?php endforeach; ?>
-                            <!-- Fin de la boucle -->
-                        </div>
+                <div class="fiche-produit-zone">
+                    <div class="fiche-produit">
+                        <?php foreach ($idProduit as $produit) : ?>
+                            <!-- Une boucle qui permet d'afficher les produits dans la BDD. -->
+                            <img class="image-produit" src="<?= $produit->img ?>" alt="<?= $produit->name ?>">
+                            <h5 class="year"><?= $produit->name ?></h5><br /> <!-- Via cet argument, il va afficher la liste des noms des produits présents dans la BDD. -->
+                            <h5 class="year">Release date : <?= $produit->year ?></h5><br /> <!-- Via cet argument, il va afficher la liste des années des produits présents dans la BDD. -->
+                        <?php endforeach; ?>
+                        <!-- Fin de la boucle -->
                     </div>
-                    <script src="../js/dark-mode.js"></script> <!-- Script pour le dark mode -->
+                </div>
+            </article>
+        </main>
+        <footer class="footer-element">
+            <a class="github" href="https://github.com/julien-garcia13/autocompletion"><p2 alt="GitHub Project">GitHub</p2></a>
+            <a class="github" href="../index.html"><p2 alt="Back to the search page">Back</p2></a>
+        </footer>
+        <script src="../js/dark-mode.js"></script> <!-- Script pour le dark mode -->
+    </body>
+</html>
